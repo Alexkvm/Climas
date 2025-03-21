@@ -57,6 +57,9 @@ body::before{
     padding: .5rem 2rem;
     margin: 1rem;
     font-family: var(--parrafos);
+    transition: all .5s ease;
+    opacity: 100%;
+    z-index: 10;
 }
 
 .notFoundValue{
@@ -213,7 +216,9 @@ input[type="search"]{
     outline: none;
 }
 .hidden{
+    opacity: 0;
+}
+.display-none {
     display: none;
 }
-
 
