@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimateAPI</title>
+    <link rel="stylesheet" href="Climate.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Awesome -->
+    <script src="https://kit.fontawesome.com/9c9cc6de12.js" crossorigin="anonymous"></script>
+    <!-- icon-page -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon.ico">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="gridContent"> <!-- footer siempre bot -->
+
+        <div class="notFound hidden">
+            <!-- <p class="notFoundMessage">El país <span class="notFoundValue"></span> no existe.</p> -->
+        </div>
+
+        <div class="favSection"> <!-- caja de favoritos -->
+            <h3>Favorites:</h3>
+            <ul class="favList">
+            </ul>
+        </div>
+
+        <main>
+            <div class="mainContainer container">
+                <section class="climate">
+                <div class="favorite"><i id="fav" class="fa-solid fa-star"></i></div>
+                <h1 id="country">LOADING...</h1>
+                    <div class="climateData">
+                        <div class="climateBox">
+                            <p id="climate">...</p>
+                            <p id="temp">...</p> 
+                        </div>
+                        <div class="climateImg">
+                            <!-- <img src="ClimateImg/Climate/cloud.png" alt=""> -->
+                        </div>
+                    </div>
+
+                    <div class="minmaxTemp">
+                        <div class="max flex"><p>Temp max</p><span id="tempMax">...</span></div>
+                        <div class="line"></div>
+                        <div class="min flex"><p>Temp min</p><span id="tempMin">...</span></div>
+                    </div> 
+                </section>
+            </div>
+        </main>
+        <footer>
+            <form id="formSearch" class="inputContainer container">
+                <input id="input" type="search" placeholder="Insert a Country" autocomplete="off">
+                <input type="submit" class="hidden">
+            </form>
+        </footer>
+
+    </div>
+    <script src="Climate.js"></script>
+</body>
+</html>
+
+<!-- .map(country => {
+    const li = document.createElement("li");
+    li.textContent = country;
+
+    li.addEventListener('click', () =>{
+        console.log(li.textContent)
+    })
+})  -->

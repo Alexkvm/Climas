@@ -1,0 +1,219 @@
+:root{
+    --titulos: "Bebas Neue", sans-serif;
+    --parrafos:'Mulish', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+.gridContent{
+    position: relative;
+
+    display: grid;
+    min-height: 100dvh;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto;
+}
+body{
+    overflow: hidden;
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/BuenosAires.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.6);
+
+}
+/*/////////////////////////////////////////777/*/
+
+.notFound{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+
+    min-width: 200px;
+    background-color: #eeee;
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    font-family: var(--parrafos);
+}
+
+.notFoundValue{
+    color: #f00;
+}
+/*///////////////// FavSection ///////////////*/
+.favSection{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 2rem 0;
+    font-family: var(--parrafos);
+}
+.favSection h3{
+    color: #eee;
+    font-size: .9rem;
+    margin-left: 1rem;
+    user-select: none;
+
+}
+.favSection .li-item{
+    font-size: 1.1rem;
+    color: #bbb;
+    margin: 1rem 0;
+    margin-left: 2rem;
+    transition: .2s ease-in-out;
+}
+.favSection .li-item:hover{
+    color: #eee;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+/*//////////////// Header ////////////////////*/
+.navContainer{
+    height: auto;
+}
+
+/*///////////////// Main /////////////////////*/
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.climate{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    max-width: 1200px;
+    height: 80dvh;
+    border-radius: .5rem;
+    background-color: #2229;
+
+    padding: 2rem;
+}
+.favorite{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}
+.fa-star{
+    transition: .15s all ease-in-out;
+    color: #aaa;
+    font-size: 1.8rem;
+}
+.fa-star:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.favAction:hover{
+    text-shadow: 0 0 5px #ee0;
+}
+.readyFav{
+    color: #ee0;
+}
+
+
+.climate h1{
+    font-family: var(--titulos);
+    font-size: 4rem;
+    color: #fef;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.climateBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #eee;
+    font-family: var(--parrafos);
+    font-size: 2rem;
+    gap:1rem;
+}
+.climateBox p{
+    text-align: center;
+    font-weight: 800;
+
+}
+.climateData{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.climateImg img{
+    width: 6rem;
+    filter: invert(1);
+    padding-left: 1rem;
+    user-select: none;
+}
+
+.minmaxTemp{
+    padding: 0 5rem;
+}
+.minmaxTemp p {
+    opacity: .9;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+    margin: 0.5rem 0;
+}
+.max, .min{
+    color: #eee;
+    font-size: 1.5rem;
+    font-family: var(--parrafos);
+    justify-content: space-between;
+}
+
+/*////////////////// Footer //////////////////*/
+.inputContainer{
+    display: flex;
+    justify-content: center;
+}
+input[type="search"]{
+    font-family: var(--parrafos);
+    width: 50%;
+    min-height: 10dvh;
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    text-align: center;
+    
+    border-radius: .5rem .5rem 0 0;
+    border: none;
+    outline: none;
+}
+.hidden{
+    display: none;
+}
+
+
