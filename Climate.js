@@ -204,21 +204,24 @@ const checkFavorites = () =>{
 const countryNotFoundMessage = (inputValue) =>{
 
     notFoundDiv.innerHTML = `<p class="notFoundMessage">El país <span class="notFoundValue">"${inputValue}"</span> no existe.</p>`;
+    notFoundDiv.style.display = 'block'
+    setTimeout(()=>{
+        notFoundDiv.classList.remove("hidden");
+    },10);
+    setTimeout(()=>{
+        notFoundDiv.classList.add("hidden");
+    },3500);
+    setTimeout(()=>{
+        notFoundDiv.style.display = 'none'
+    },4000);
+}
+
+const InsertCountryMessage = () =>{
+    notFoundDiv.innerHTML = `Por favor ingrese un país.`;
     notFoundDiv.classList.remove("hidden");
     setTimeout(()=>{
         notFoundDiv.classList.add("hidden");
     },3500);
-    
-}
-
-const InsertCountryMessage = () =>{
-
-notFoundDiv.innerHTML = `Por favor ingrese un país.`;
-notFoundDiv.classList.remove("hidden");
-setTimeout(()=>{
-    notFoundDiv.classList.add("hidden");
-},3500)
-
 }
 
 
